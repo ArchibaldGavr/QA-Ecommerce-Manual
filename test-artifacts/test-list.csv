@@ -1,0 +1,7 @@
+ID,Feature,Title,Type,Preconditions,Steps,Expected
+TL-001,Auth,Login with valid credentials,Positive,User exists,Go to /login → enter valid email+password → Submit,User is redirected to /account
+TL-002,Auth,Login with invalid password,Negative,User exists,Go to /login → valid email + wrong password → Submit,Error message, no login
+TL-010,Search,Search exact product name,Positive,Products exist,Go to / → type "Bluetooth Speaker X" → Enter,Results contain the product
+TL-020,Cart,Add item to cart from PDP,Positive,Product in stock,Go to PDP → click "Add to cart",Cart count increases by 1
+TL-030,Checkout,Apply valid coupon,Positive,Coupon active,Go to checkout → apply COUPON10,Discount applied
+TL-031,Checkout,Apply expired coupon,Negative,Coupon expired,Go to checkout → apply OLD10,Error: coupon expired
